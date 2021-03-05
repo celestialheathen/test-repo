@@ -1,0 +1,22 @@
+table {
+    border: 1px solid black;
+    width: 780px;
+    height: 700px;
+}
+
+tr td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.bomb {
+
+}
+
+.flagged {
+
+}
+
+.question {
+    
+}
