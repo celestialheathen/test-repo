@@ -33,12 +33,14 @@ function moveSprite(e) {
         case 37: 
             sprite.style.transform = `translateX(-70px)`
             currentX = player.x
+            // Add "facing_left" to player class
             break;
             // Left
 
         case 39: 
             sprite.style.transform = `translateX(70px)`
             currentX = player.x;
+            // Add "facing_right" to player class
             break;
             // Right
 
@@ -51,6 +53,7 @@ function moveSprite(e) {
         case 40: 
             sprite.style.transform = `translateY(60px)`
             currentY = player.y; 
+            // Add "facing_down" to player class
             break;
             // Down
     }
