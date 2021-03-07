@@ -1,8 +1,14 @@
 const table = document.querySelector('table#game-board')
+const player = document.querySelector('img.sprite_sheet')
+const sprite = document.querySelector('div.sprite')
+
 
 const width = 12 
 const height = 11
 let cellID = 1
+
+let currentX = player.x
+let currentY = player.y
 
 for (let h = 0; h < height; h++ ) {
 
@@ -21,5 +27,34 @@ for (let h = 0; h < height; h++ ) {
     table.appendChild(tableRow)
 }
 
-const cell1 = document.querySelector('td') 
-console.log(cell1)
+
+function moveSprite(e) {
+    switch (e.keyCode) {
+        case 37: 
+            sprite.style.transform = `translateX(-70px)`
+            currentX = player.x
+            break;
+            // Left
+
+        case 39: 
+            sprite.style.transform = `translateX(70px)`
+            currentX = player.x;
+            break;
+            // Right
+
+        case 38:  
+            sprite.style.transform = `translateY(-60px)`
+            currentY = player.y;
+            break;
+            // Up
+
+        case 40: 
+            sprite.style.transform = `translateY(60px)`
+            currentY = player.y; 
+            break;
+            // Down
+    }
+
+}
+
+document.addEventListener('keydown', moveSprite)
